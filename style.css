@@ -1,0 +1,1100 @@
+/* =========================================
+   SPECTRUMORMOC
+   GLOBAL
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #05080c;
+
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(0, 130, 220, 0.08),
+            transparent 45%
+        ),
+
+        #05080c;
+}
+
+
+.hero-content {
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.eyebrow {
+
+    color: #63cfff;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(
+        55px,
+        10vw,
+        125px
+    );
+
+    font-weight: 300;
+
+    letter-spacing: 10px;
+
+    line-height: 1;
+
+}
+
+
+.hero h1 span {
+
+    color: #27b9ff;
+
+    text-shadow:
+
+        0 0 25px
+        rgba(39, 185, 255, 0.35);
+}
+
+
+.subtitle {
+
+    margin-top: 28px;
+
+    color: #7f8c97;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+}
+
+
+
+/* =========================================
+   EXPLORE BUTTON
+   ========================================= */
+
+#exploreButton {
+
+    margin-top: 45px;
+
+    padding: 15px 28px;
+
+    background: transparent;
+
+    border: 1px solid
+        rgba(100, 205, 255, 0.5);
+
+    color: white;
+
+    letter-spacing: 3px;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+#exploreButton span {
+
+    margin-left: 15px;
+
+    color: #5dccff;
+
+    font-size: 15px;
+}
+
+
+#exploreButton:hover {
+
+    background:
+        rgba(50, 180, 255, 0.08);
+
+    border-color:
+        #5dccff;
+
+    box-shadow:
+        0 0 30px
+        rgba(50, 190, 255, 0.15);
+}
+
+
+
+/* =========================================
+   LIGHT LINE
+   ========================================= */
+
+.light-line {
+
+    position: absolute;
+
+    width: 70%;
+
+    height: 1px;
+
+    background:
+        rgba(80, 190, 255, 0.18);
+
+    top: 50%;
+
+    left: 15%;
+}
+
+
+.light-pulse {
+
+    position: absolute;
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+
+        0 0 10px #5dccff,
+
+        0 0 30px #22baff,
+
+        0 0 60px #168cff;
+
+    animation:
+        travelLight
+        4s
+        linear
+        infinite;
+}
+
+
+@keyframes travelLight {
+
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+
+}
+
+
+
+/* =========================================
+   SCROLL HINT
+   ========================================= */
+
+.scroll-hint {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color: #56636e;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+}
+
+
+.scroll-line {
+
+    width: 1px;
+
+    height: 35px;
+
+    background: #33414b;
+
+    margin: 12px auto 0;
+}
+
+
+
+/* =========================================
+   CABLE SECTION
+   ========================================= */
+
+.cable-section {
+
+    min-height: 100vh;
+
+    padding:
+        120px
+        6vw
+        100px;
+
+    position: relative;
+
+    background: #070a0e;
+
+    overflow: hidden;
+}
+
+
+.cable-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+
+    height: 700px;
+
+    left: 50%;
+
+    top: 48%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 150, 255, 0.10),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+
+/* =========================================
+   SECTION HEADING
+   ========================================= */
+
+.section-heading {
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.section-number {
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #65c9ff;
+
+    margin-bottom: 22px;
+}
+
+
+.section-heading h2 {
+
+    font-size:
+        clamp(
+            42px,
+            7vw,
+            78px
+        );
+
+    font-weight: 300;
+
+    letter-spacing: 6px;
+}
+
+
+.section-description {
+
+    margin:
+        25px
+        auto
+        0;
+
+    max-width: 600px;
+
+    color: #82909b;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+
+/* =========================================
+   3D STAGE
+   ========================================= */
+
+.cable-stage {
+
+    max-width: 1400px;
+
+    height: 560px;
+
+    margin:
+        45px
+        auto
+        0;
+
+    position: relative;
+}
+
+
+#cable3D {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    cursor: grab;
+
+    touch-action: none;
+}
+
+
+#cable3D:active {
+
+    cursor: grabbing;
+}
+
+
+#cable3D canvas {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+
+/* =========================================
+   LABELS
+   ========================================= */
+
+.cable-label {
+
+    position: absolute;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    width: 230px;
+
+    color: #8d9aa4;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    pointer-events: none;
+
+    z-index: 20;
+}
+
+
+.cable-label strong {
+
+    display: block;
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+
+.cable-label small {
+
+    display: block;
+
+    color: #5dcaff;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+
+.cable-label p {
+
+    color: #71808b;
+}
+
+
+.label-dot {
+
+    flex-shrink: 0;
+
+    width: 7px;
+
+    height: 7px;
+
+    margin:
+        5px
+        12px
+        0
+        0;
+
+    border-radius: 50%;
+
+    background: #64d3ff;
+
+    box-shadow:
+        0 0 8px #64d3ff;
+}
+
+
+
+/* =========================================
+   LABEL POSITIONS
+   ========================================= */
+
+.label-messenger {
+
+    top: 80px;
+
+    left: 8%;
+}
+
+
+.label-web {
+
+    top: 190px;
+
+    left: 5%;
+}
+
+
+.label-jacket {
+
+    bottom: 90px;
+
+    left: 10%;
+}
+
+
+.label-aramid {
+
+    top: 80px;
+
+    right: 7%;
+}
+
+
+.label-tube {
+
+    top: 210px;
+
+    right: 5%;
+}
+
+
+.label-fiber {
+
+    bottom: 75px;
+
+    right: 10%;
+}
+
+
+
+/* =========================================
+   CONTINUE MESSAGE
+   ========================================= */
+
+.continue-message {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 15px;
+
+    color: #66747f;
+
+    text-align: center;
+}
+
+
+.continue-message span {
+
+    width: 80px;
+
+    height: 1px;
+
+    background: #263038;
+}
+
+
+.continue-message p {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    line-height: 2;
+}
+
+
+
+/* =========================================
+   INFORMATION PANEL
+   ========================================= */
+
+.info-panel {
+
+    position: fixed;
+
+    right: 30px;
+
+    bottom: 30px;
+
+    width:
+        min(
+            420px,
+            calc(100% - 60px)
+        );
+
+    padding: 35px;
+
+    background:
+        rgba(
+            8,
+            13,
+            18,
+            0.96
+        );
+
+    border:
+        1px solid
+        rgba(
+            100,
+            200,
+            255,
+            0.35
+        );
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+
+        0 20px 60px
+        rgba(0, 0, 0, 0.6),
+
+        0 0 40px
+        rgba(0, 150, 255, 0.10);
+
+    transform:
+        translateY(40px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+
+        opacity
+        0.4s
+        ease,
+
+        transform
+        0.4s
+        ease;
+
+    z-index: 100;
+}
+
+
+.info-panel.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    pointer-events: auto;
+}
+
+
+.close-info {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #82909b;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+.close-info:hover {
+
+    color: white;
+}
+
+
+.info-number {
+
+    color: #5dccff;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.info-panel h3 {
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+}
+
+
+.info-line {
+
+    width: 50px;
+
+    height: 1px;
+
+    margin: 20px 0;
+
+    background: #5dccff;
+
+    box-shadow:
+        0 0 10px #5dccff;
+}
+
+
+.info-panel p:last-child {
+
+    color: #8b9aa5;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .hero h1 {
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .cable-section {
+
+        padding:
+            90px
+            20px
+            80px;
+
+    }
+
+
+    .cable-stage {
+
+        height: 650px;
+
+        margin-top: 30px;
+
+    }
+
+
+    #cable3D {
+
+        height: 500px;
+
+    }
+
+
+    .cable-label {
+
+        width: 170px;
+
+        font-size: 9px;
+
+    }
+
+
+    .cable-label strong {
+
+        font-size: 8px;
+
+    }
+
+
+    .label-messenger {
+
+        top: 10px;
+
+        left: 0;
+
+    }
+
+
+    .label-web {
+
+        top: 160px;
+
+        left: 0;
+
+    }
+
+
+    .label-jacket {
+
+        bottom: 100px;
+
+        left: 0;
+
+    }
+
+
+    .label-aramid {
+
+        top: 10px;
+
+        right: 0;
+
+    }
+
+
+    .label-tube {
+
+        top: 160px;
+
+        right: 0;
+
+    }
+
+
+    .label-fiber {
+
+        bottom: 100px;
+
+        right: 0;
+
+    }
+
+
+    .info-panel {
+
+        right: 15px;
+
+        bottom: 15px;
+
+        width:
+            calc(100% - 30px);
+
+        padding: 28px;
+
+    }
+
+
+    .info-panel h3 {
+
+        font-size: 20px;
+
+    }
+
+}
+
+/* =========================================
+   MOVING FIBER — UNDERLINE
+   ========================================= */
+
+  .light-line {
+    top: 55% !important;
+    left: 50% !important;
+    width: 96% !important;
+    transform: translateX(-50%);
+    height: 2px;
+    background: transparent !important;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.light-pulse {
+    display: block;
+    width: 120px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #25baff,
+        #ffffff,
+        #25baff,
+        transparent
+    );
+
+    box-shadow:
+        0 0 8px #25baff,
+        0 0 20px rgba(37, 186, 255, 0.7);
+
+    animation: fiberTravel 2.8s linear infinite;
+}
+
+@keyframes fiberTravel {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    88% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(calc(100vw + 150px));
+        opacity: 0;
+    }
+}
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 100svh;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        width: 92%;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .spectrum-logo {
+        width: 140px;
+        margin-bottom: 24px;
+    }
+
+    .spectrum-infinity {
+        width: 96px;
+    }
+
+    .spectrum-logo-name {
+        font-size: 17px;
+    }
+
+    .spectrum-logo-subtitle {
+        font-size: 6.5px;
+        letter-spacing: 1px;
+    }
+
+    .hero-content h1 {
+        width: 100%;
+        font-size: clamp(30px, 8vw, 48px);
+        line-height: 1.08;
+        letter-spacing: 0.01em;
+        white-space: normal;
+    }
+
+    .hero-content h1 .fiber-word,
+    .hero-content h1 .optic-word {
+        display: inline;
+    }
+
+    .light-line {
+        top: 55% !important;
+        left: 50% !important;
+        width: 96% !important;
+        transform: translateX(-50%);
+        height: 2px;
+        overflow: hidden;
+    }
+
+    .light-pulse {
+        width: 100px;
+    }
+
+    .hero-content .subtitle {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    #exploreButton {
+        margin-top: 22px;
+    }
+
+    .scroll-hint {
+        bottom: 24px;
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+}
+@media (max-width: 600px) {
+
+    /* MOBILE 3D CABLE STAGE */
+    .cable-stage {
+        min-height: 560px;
+        height: 560px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #cable3D {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    #cable3D canvas {
+        width: 100% !important;
+        height: 100% !important;
+        display: block;
+        touch-action: none;
+    }
+
+    /* Keep labels readable without covering the model */
+    .cable-label {
+        font-size: 9px;
+        max-width: 150px;
+    }
+
+    .cable-label strong {
+        font-size: 9px;
+    }
+
+    .cable-label p {
+        font-size: 8px;
+        line-height: 1.4;
+    }
+
+    /* Information panel */
+    .info-panel {
+        width: calc(100% - 30px);
+        max-width: 360px;
+        left: 15px;
+        right: 15px;
+        box-sizing: border-box;
+    }
+
+}
