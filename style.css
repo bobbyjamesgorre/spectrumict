@@ -1098,3 +1098,162 @@ button {
     }
 
 }
+/* =========================================
+   CONTACT US
+   ========================================= */
+
+.contact-section {
+    position: relative;
+    padding: 120px 6vw 130px;
+    background: #05080c;
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 150, 255, 0.08),
+            transparent 68%
+        );
+    pointer-events: none;
+}
+
+.contact-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-number {
+    color: #65c9ff;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+.contact-inner h2 {
+    font-size: clamp(38px, 6vw, 68px);
+    font-weight: 300;
+    letter-spacing: 6px;
+    color: #ffffff;
+}
+
+.contact-accent {
+    width: 50px;
+    height: 1px;
+    margin: 24px auto 0;
+    background: #5dccff;
+    box-shadow: 0 0 10px #5dccff;
+}
+
+.contact-intro {
+    max-width: 520px;
+    margin: 22px auto 50px;
+    color: #82909b;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: rgba(100, 200, 255, 0.12);
+    border: 1px solid rgba(100, 200, 255, 0.12);
+}
+
+.contact-card {
+    min-height: 125px;
+    padding: 28px 30px;
+    background: rgba(7, 11, 16, 0.92);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-label {
+    display: block;
+    margin-bottom: 12px;
+    color: #5dccff;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.contact-card strong {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.contact-card p,
+.contact-company {
+    color: #a1adb7;
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
+
+.contact-company {
+    margin-top: 5px;
+    color: #687783;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.contact-person {
+    grid-column: span 2;
+    min-height: 145px;
+    border-bottom: 1px solid rgba(100, 200, 255, 0.08);
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 90px 20px 100px;
+    }
+
+    .contact-inner h2 {
+        letter-spacing: 4px;
+    }
+
+    .contact-intro {
+        margin-bottom: 35px;
+        font-size: 13px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-person {
+        grid-column: span 1;
+    }
+
+    .contact-card {
+        min-height: 105px;
+        padding: 24px 22px;
+    }
+
+    .contact-card strong {
+        font-size: 16px;
+    }
+
+    .contact-card p,
+    .contact-company {
+        font-size: 12px;
+    }
+
+}
